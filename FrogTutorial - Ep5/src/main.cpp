@@ -44,7 +44,7 @@ int main()
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-	const char* vertexShaderSource = 
+	const char* vertex_shader_source = 
 		"#version 330 core\n"
 		"layout (location = 0) in vec3 aPos;\n"
 		"void main()\n"
@@ -55,10 +55,10 @@ int main()
 	uint32_t vertexShader;
 	vertexShader = glCreateShader(GL_VERTEX_SHADER);
 
-	glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
+	glShaderSource(vertexShader, 1, &vertex_shader_source, NULL);
 	glCompileShader(vertexShader);
 
-	const char* fragmentShaderSource =
+	const char* fragment_shader_source =
 		"#version 330 core\n"
 		"out vec4 FragColor;\n"
 		"void main()\n"
@@ -70,7 +70,7 @@ int main()
 
 	fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 
-	glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
+	glShaderSource(fragmentShader, 1, &fragment_shader_source, NULL);
 	glCompileShader(fragmentShader);
 
 	uint32_t shaderProgram;
