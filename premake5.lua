@@ -1,7 +1,7 @@
-workspace "FrogTutorial"
+workspace "untitled_frog_game"
 	architecture "x64"
 	configurations { "Debug", "Release" }
-	startproject "FrogTutorial"
+	startproject "untitled_frog_game"
 	flags
 	{
 		"MultiProcessorCompile"
@@ -10,13 +10,13 @@ workspace "FrogTutorial"
 	outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 	IncludeDir = {}
-	IncludeDir["GLEW"] 	= "%{wks.location}/FrogTutorial/external/GLEW/include"
-	IncludeDir["GLFW"] 	= "%{wks.location}/FrogTutorial/external/GLFW/include"
-	IncludeDir["stb_image"] = "%{wks.location}/FrogTutorial/external/stb_image"
+	IncludeDir["GLEW"] 	= "%{wks.location}/untitled_frog_game/external/GLEW/include"
+	IncludeDir["GLFW"] 	= "%{wks.location}/untitled_frog_game/external/GLFW/include"
+	IncludeDir["stb_image"] = "%{wks.location}/untitled_frog_game/external/stb_image"
 
 	group "Dependencies"
-	include "FrogTutorial/external/GLEW"
-	include "FrogTutorial/external/GLFW"
+	include "untitled_frog_game/external/GLEW"
+	include "untitled_frog_game/external/GLFW"
 	group ""
 
-	include "FrogTutorial"
+	include "untitled_frog_game"
